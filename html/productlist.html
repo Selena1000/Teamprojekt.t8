@@ -14,73 +14,144 @@
     <link rel="stylesheet" href="../fonts/ArchivoNarrow-VariableFont_wght.woff" />
   </head>
   <body class="product-content">
+    <header>
+      <div class="topbar">
+        <a href="index.html" class="logo">LOGO</a>
+
+        <nav class="main-nav" aria-label="Primær navigation">
+          <a href="">MENS</a>
+          <a href="">WOMENS</a>
+          <a href="">ALL</a>
+        </nav>
+
+        <div class="actions">
+          <button id="favorites-icon" class="nav-icon">♡<span class="favorites-bubble">0</span></button>
+          <div id="cart-icon">
+            <i class="ri-shopping-cart-2-line"></i>
+            <span class="cart-item-count"></span>
+          </div>
+          <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <div class="hero"></div>
+    <div class="cart">
+      <h2>Your Cart</h2>
+      <div class="cart-content">
+        <div class="cart-box">
+          <!-- <img src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp" class="cart-image" alt="" />
+          <div class="cart-details">
+            <h3 class="cart-product-title">Product Title</h3>
+            <span class="cart-price">DKK,-</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="quantity">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="ri-delete-bin-5-line"></i> -->
+        </div>
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">DKK,-</div>
+        </div>
+        <button class="btn-buy">Buy now</button>
+        <i class="ri-close-line" id="cart-close"></i>
+      </div>
+    </div>
+
+    <div class="favorites">
+      <h2>Your Favorites</h2>
+
+      <div class="favorites-content">
+        <p class="no-favorites">No favorites yet</p>
+      </div>
+      <i class="ri-close-line" id="favorites-close"></i>
+    </div>
     <!-- Produktlisten (kommer efter categorylist) -->
     <main>
-      <article class="product-box soldout discounted">
+      <article class="product-box">
         <div class="img-box">
+          <i class="ri-poker-hearts-fill favorite-btn"></i>
           <span class="discount-tag">-50%</span>
-          <img src="https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/1.webp" alt="" />
+          <img class="mainimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp" alt="" />
+          <img class="hoverimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/3.webp" alt="" />
+        </div>
+        <div class="color-options">
+          <span class="color-swatch" style="background-color: #9c9797"></span>
+          <span class="color-swatch" style="background-color: #9e2113"></span>
         </div>
         <h3>Product title</h3>
         <p>Category title</p>
         <div class="price-box">
           <p class="price"><span class="old-price">DKK,-</span></p>
           <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html">Add to cart</a>
+          <a href="productdetail.html" class="add-to-cart add-cart">Add to cart</a>
+        </div>
+      </article>
+      <article class="product-box">
+        <div class="img-box">
+          <i class="ri-poker-hearts-fill favorite-btn"></i>
+          <span class="discount-tag">-50%</span>
+          <img class="mainimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/1.webp" alt="" />
+          <img class="hoverimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/2.webp" alt="" />
+        </div>
+        <div class="color-options">
+          <span class="color-swatch" style="background-color: #9c9797"></span>
+          <span class="color-swatch" style="background-color: #000000"></span>
+          <span class="color-swatch" style="background-color: #073e08"></span>
+        </div>
+        <h3>Product title</h3>
+        <p>Category title</p>
+        <div class="price-box">
+          <p class="price"><span class="old-price">DKK,-</span></p>
+          <p class="new-price"><span>Now DKK,- </span></p>
+          <a href="productdetail.html" class="add-to-cart add-cart">See more</a>
         </div>
       </article>
       <article class="product-box soldout discounted">
         <div class="img-box">
+          <i class="ri-poker-hearts-fill favorite-btn"></i>
           <span class="discount-tag">-50%</span>
-          <img src="https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/1.webp" alt="" />
+          <img class="mainimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/1.webp" alt="" />
+          <img class="hoverimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/2.webp" alt="" />
+        </div>
+        <div class="color-options">
+          <span class="color-swatch" style="background-color: #9c9797"></span>
+          <span class="color-swatch" style="background-color: #f4d95f"></span>
+          <span class="color-swatch" style="background-color: #4057ec"></span>
         </div>
         <h3>Product title</h3>
         <p>Category title</p>
         <div class="price-box">
           <p class="price"><span class="old-price">DKK,-</span></p>
           <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html">Add to cart</a>
+          <a href="productdetail.html" class="add-to-cart add-cart">See more</a>
         </div>
       </article>
-      <article class="product-box soldout discounted">
+
+      <article class="product-box discounted">
         <div class="img-box">
+          <i class="ri-poker-hearts-fill favorite-btn"></i>
           <span class="discount-tag">-50%</span>
-          <img src="https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/1.webp" alt="" />
+          <img class="mainimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/3.webp" alt="" />
+          <img class="hoverimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/2.webp" alt="" />
+        </div>
+        <div class="color-options">
+          <span class="color-swatch" style="background-color: #9c9797"></span>
+          <span class="color-swatch" style="background-color: #9e2113"></span>
         </div>
         <h3>Product title</h3>
         <p>Category title</p>
         <div class="price-box">
           <p class="price"><span class="old-price">DKK,-</span></p>
           <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html">Add to cart</a>
-        </div>
-      </article>
-      <article class="product-box soldout discounted">
-        <div class="img-box">
-          <span class="discount-tag">-50%</span>
-          <img src="https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/1.webp" alt="" />
-        </div>
-        <h3>Product title</h3>
-        <p>Category title</p>
-        <div class="price-box">
-          <p class="price"><span class="old-price">DKK,-</span></p>
-          <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html">Add to cart</a>
-        </div>
-      </article>
-      <article class="product-box soldout discounted">
-        <div class="img-box">
-          <span class="discount-tag">-50%</span>
-          <img src="https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/1.webp" alt="" />
-        </div>
-        <h3>Product title</h3>
-        <p>Category title</p>
-        <div class="price-box">
-          <p class="price"><span class="old-price">DKK,-</span></p>
-          <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html">Add to cart</a>
+          <a href="productdetail.html" class="add-to-cart add-cart">See more</a>
         </div>
       </article>
     </main>
+    <script src="../js/productlist.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/favorite.js"></script>
   </body>
 </html>
