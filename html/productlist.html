@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="../css/generel.css" />
     <link rel="stylesheet" href="../css/productlist.css" />
     <link rel="stylesheet" href="../css/generel.css" />
-    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/favourites.css" />
     <link rel="stylesheet" href="../fonts/AlbertSans-VariableFont_wght.woff" />
     <link rel="stylesheet" href="../fonts/Archivo-VariableFont_wdth,wght.woff" />
     <link rel="stylesheet" href="../fonts/ArchivoBlack-Regular.woff" />
     <link rel="stylesheet" href="../fonts/ArchivoNarrow-VariableFont_wght.woff" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
   </head>
   <body class="product-content">
     <header>
@@ -19,9 +22,9 @@
         <a href="index.html" class="logo">LOGO</a>
 
         <nav class="main-nav" aria-label="Primær navigation">
-          <a href="">MENS</a>
-          <a href="">WOMENS</a>
-          <a href="">ALL</a>
+          <a href="index.html">PRODUCTS</a>
+          <a href="categorylist.html">ACCESSORIES</a>
+          <a href="productlist.html">BAGS</a>
         </nav>
 
         <div class="actions">
@@ -31,6 +34,11 @@
             <span class="cart-item-count"></span>
           </div>
           <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+          <div class="burger-dropdown" id="burgerDropdown">
+            <a href="index.html">PRODUCTS</a>
+            <a href="categorylist.html">ACCESSORIES</a>
+            <a href="productlist.html">BAGS</a>
+          </div>
         </div>
       </div>
     </header>
@@ -55,7 +63,7 @@
           <div class="total-title">Total</div>
           <div class="total-price">DKK,-</div>
         </div>
-        <button class="btn-buy">Buy now</button>
+        <button class="btn-buy">Go to checkout</button>
         <i class="ri-close-line" id="cart-close"></i>
       </div>
     </div>
@@ -68,7 +76,19 @@
       </div>
       <i class="ri-close-line" id="favorites-close"></i>
     </div>
-    <!-- Produktlisten (kommer efter categorylist) -->
+
+    <section class="category-header">
+      <h1 class="page-title">BAGS</h1>
+
+      <div class="category-controls">
+        <a href="categorylist.html" class="back-button"> ← Back </a>
+
+        <button class="filter-button">
+          <span>FILTERS</span>
+          <i class="ri-equalizer-line"></i>
+        </button>
+      </div>
+    </section>
     <main>
       <article class="product-box">
         <div class="img-box">
@@ -81,7 +101,7 @@
           <span class="color-swatch" style="background-color: #9c9797"></span>
           <span class="color-swatch" style="background-color: #9e2113"></span>
         </div>
-        <h3>Product title</h3>
+        <h3 class="product-title">Nike Air Jordan 1</h3>
         <p>Category title</p>
         <div class="price-box">
           <p class="price"><span class="old-price">DKK,-</span></p>
@@ -101,7 +121,7 @@
           <span class="color-swatch" style="background-color: #000000"></span>
           <span class="color-swatch" style="background-color: #073e08"></span>
         </div>
-        <h3>Product title</h3>
+        <h3 class="product-title">Nike Baseball Cleats</h3>
         <p>Category title</p>
         <div class="price-box">
           <p class="price"><span class="old-price">DKK,-</span></p>
@@ -121,7 +141,7 @@
           <span class="color-swatch" style="background-color: #f4d95f"></span>
           <span class="color-swatch" style="background-color: #4057ec"></span>
         </div>
-        <h3>Product title</h3>
+        <h3 class="product-title">Puma Future Rider Trainers</h3>
         <p>Category title</p>
         <div class="price-box">
           <p class="price"><span class="old-price">DKK,-</span></p>
@@ -141,7 +161,7 @@
           <span class="color-swatch" style="background-color: #9c9797"></span>
           <span class="color-swatch" style="background-color: #9e2113"></span>
         </div>
-        <h3>Product title</h3>
+        <h3 class="product-title">Off-White Red Sneakers</h3>
         <p>Category title</p>
         <div class="price-box">
           <p class="price"><span class="old-price">DKK,-</span></p>
@@ -153,5 +173,34 @@
     <script src="../js/productlist.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/favorite.js"></script>
+    <footer class="footer">
+      <h2 class="footer-title">ARETE</h2>
+      <div class="grid-3">
+        <div class="footer-section-location">
+          <h3>LOCATION</h3>
+          <p>Blågårdsgade 8111<br />2002 København</p>
+        </div>
+        <div class="footer-section-hours">
+          <h3>OPENING HOURS</h3>
+          <p>
+            Monday - Friday: 10:00-18:00<br />
+            Saturday - Sunday: 11:00-17:00
+          </p>
+        </div>
+        <div class="footer-section-contact">
+          <h3>KONTAKT</h3>
+          <p>+45 1234567<br />Arete@gmail.com</p>
+
+          <h3>FØLG OS FOR AT SE MERE</h3>
+          <div class="icons">
+            <img src="../icons.footer/insta.webp" />
+            <img src="../icons.footer/linkedin.webp" />
+            <img src="../icons.footer/tiktok.webp" />
+            <img src="../icons.footer/facebook.webp" />
+          </div>
+        </div>
+      </div>
+      <p>AreteSport2026™</p>
+    </footer>
   </body>
 </html>
