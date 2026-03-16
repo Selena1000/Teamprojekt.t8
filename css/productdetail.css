@@ -1,3 +1,29 @@
+body,
+p,
+span,
+a,
+li,
+button,
+input,
+label {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
 }
@@ -13,7 +39,6 @@ body {
   gap: 40px;
 }
 
-/* BACK BUTTON BOX */
 .back-box {
   display: inline-block;
   padding: 8px 14px;
@@ -72,7 +97,6 @@ body {
   object-fit: cover;
 }
 
-/* IMAGE ARROWS */
 .img-arrow {
   position: absolute;
   top: 50%;
@@ -269,7 +293,6 @@ body {
   letter-spacing: 2px;
 }
 
-/* højre: ikoner */
 .actions {
   display: flex;
   align-items: center;
@@ -291,7 +314,6 @@ body {
   height: 22px;
 }
 
-/* burger */
 .burger {
   background: transparent;
   border: 0;
@@ -358,7 +380,6 @@ body {
     height: 60px;
   }
 
-  /* BACK BUTTON BOX */
   .back-box {
     display: inline-block;
     padding: 8px 14px;
@@ -418,7 +439,6 @@ body {
     object-fit: cover;
   }
 
-  /* IMAGE ARROWS */
   .img-arrow {
     position: absolute;
     top: 50%;
