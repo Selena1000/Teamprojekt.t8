@@ -6,8 +6,114 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/generel.css" />
     <link rel="stylesheet" href="/css/categorylist.css" />
+    <link rel="stylesheet" href="../css/generel.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../fonts/AlbertSans-VariableFont_wght.woff" />
+    <link rel="stylesheet" href="../fonts/Archivo-VariableFont_wdth,wght.woff" />
+    <link rel="stylesheet" href="../fonts/ArchivoBlack-Regular.woff" />
+    <link rel="stylesheet" href="../fonts/ArchivoNarrow-VariableFont_wght.woff" />
   </head>
+  <!-- HERO -->
   <body>
-    <!-- kategori listen -->
+    <header class="hero">
+      <!-- topbar oven på billedet -->
+      <div class="topbar">
+        <a href="/" class="logo">LOGO</a>
+
+        <nav class="main-nav" aria-label="Primær navigation">
+          <a href="">MENS</a>
+          <a href="">WOMENS</a>
+          <a href="">ALL</a>
+        </nav>
+
+        <div class="actions">
+          <button class="nav-icon">♡</button>
+          <img src="/img.categorylist/Vector_result.webp" alt="kurv" class="icon" />
+
+          <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
+          <div class="burger-dropdown" id="burgerDropdown">
+            <a href="">MENS</a>
+            <a href="">WOMENS</a>
+            <a href="">ACCESSORIES</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <section class="section accessories">
+        <h1 class="section-title">ACCESSORIES</h1>
+
+        <div class="cards">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="/img.categorylist/accesories_result.webp" alt="All accessories" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">ALL ACCESORIES</h3>
+              <a href="#" class="pill">Shop now</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="/img.categorylist/bags_result.webp" alt="Bags" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">BAGS</h3>
+              <a href="#" class="pill">Shop now</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="/img.categorylist/caps_result.webp" alt="Caps" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">CAPS</h3>
+              <a href="#" class="pill">Shop now</a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="/img.categorylist/waterbottles_result.webp" alt="Water bottles" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">WATER BOTTLES</h3>
+              <a href="#" class="pill">Shop now</a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="/img.categorylist/sportsgear_result.webp" alt="Sports gear" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">SPORTS GEAR</h3>
+              <a href="#" class="pill">Shop now</a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card">
+            <div class="thumb">
+              <img src="/img.categorylist/sunglasses_result.webp" alt="Sunglasses" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">SUNGLASSES</h3>
+              <a href="#" class="pill">Shop now</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="../js/categorylist.js"></script>
   </body>
 </html>
