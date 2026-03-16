@@ -22,6 +22,10 @@ p {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+a {
+  font-family: "Albert Sans", sans-serif;
+  font-style: normal;
+}
 .hero {
   position: relative;
   height: 70vh;
