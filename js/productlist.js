@@ -9,5 +9,9 @@ document.querySelectorAll(".color-options").forEach((group) => {
     });
   });
 });
+const burger = document.querySelector(".burger");
+const burgerDropdown = document.querySelector("#burgerDropdown");
 
-// Favorite toggle
+burger.addEventListener("click", () => {
+  burgerDropdown.classList.toggle("open");
+});

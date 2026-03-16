@@ -1,41 +1,56 @@
-// --- SELECTORS ---
-const favoriteButtons = document.querySelectorAll(".favorite-btn");
+console.log("FAVORITE.JS IS RUNNING");
+
+// ------------------------------
+// SELECTORS
+// ------------------------------
+const favoritesPanel = document.querySelector(".favorites");
 const favoritesContent = document.querySelector(".favorites-content");
 const favoritesIcon = document.querySelector("#favorites-icon");
-const favoritesPanel = document.querySelector(".favorites");
 const favoritesClose = document.querySelector("#favorites-close");
+const bubble = document.querySelector(".favorites-bubble");
 
-// --- HEART CLICK LOGIC ---
-favoriteButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.classList.toggle("favorited");
+// ------------------------------
+// EVENT DELEGATION FOR HEARTS
+// ------------------------------
+document.addEventListener("click", (e) => {
+  const heart = e.target.closest(".favorite-btn");
+  if (!heart) return;
 
-    // pop animation
-    btn.classList.add("pop");
-    setTimeout(() => btn.classList.remove("pop"), 200);
+  console.log("HEART CLICKED");
 
-    const productBox = btn.closest(".product-box");
+  const product = heart.closest(".product-box");
+  if (!product) return;
 
-    if (btn.classList.contains("favorited")) {
-      addToFavorites(productBox);
-    } else {
-      removeFromFavorites(productBox);
-    }
-  });
+  heart.classList.toggle("favorited");
+
+  if (heart.classList.contains("favorited")) {
+    addToFavorites(product);
+  } else {
+    removeFromFavorites(product);
+  }
+
+  updateBubble();
+  updateEmptyMessage();
 });
 
-// --- ADD FAVORITE ---
+// ------------------------------
+// ADD FAVORITE
+// ------------------------------
 function addToFavorites(productBox) {
+  const title = productBox.querySelector(".product-title").textContent.trim();
   const img = productBox.querySelector(".mainimg").src;
-  const title = productBox.querySelector("h3").textContent;
-  const link = productBox.querySelector("a.add-cart").getAttribute("href");
+  const link = productBox.querySelector(".add-to-cart")?.href || "#";
 
-  const favItem = document.createElement("div");
-  favItem.classList.add("fav-item");
-  favItem.dataset.title = title;
+  console.log("addToFavorites:", title);
 
-  favItem.innerHTML = `
-    <img src="${img}" />
+  if (favoritesContent.querySelector(`[data-title="${title}"]`)) return;
+
+  const item = document.createElement("div");
+  item.classList.add("fav-item");
+  item.dataset.title = title;
+
+  item.innerHTML = `
+    <img src="${img}" alt="">
     <div class="fav-info">
       <p>${title}</p>
       <a href="${link}" class="fav-view">View item</a>
@@ -43,60 +58,63 @@ function addToFavorites(productBox) {
     <i class="ri-delete-bin-line remove-fav"></i>
   `;
 
-  favoritesContent.appendChild(favItem);
+  favoritesContent.appendChild(item);
 
-  // remove button inside favorites
-  favItem.querySelector(".remove-fav").addEventListener("click", () => {
-    favItem.remove();
+  item.querySelector(".remove-fav").addEventListener("click", () => {
+    item.remove();
     unhighlightHeart(title);
+    updateBubble();
     updateEmptyMessage();
-    updateFavoritesBubble();
   });
-
-  updateEmptyMessage();
-  updateFavoritesBubble();
 }
 
-// --- REMOVE FAVORITE ---
+// ------------------------------
+// REMOVE FAVORITE
+// ------------------------------
 function removeFromFavorites(productBox) {
-  const title = productBox.querySelector("h3").textContent;
-  const favItem = favoritesContent.querySelector(`[data-title="${title}"]`);
-  if (favItem) favItem.remove();
+  const title = productBox.querySelector(".product-title").textContent.trim();
+  console.log("removeFromFavorites:", title);
 
-  updateEmptyMessage();
-  updateFavoritesBubble();
+  const item = favoritesContent.querySelector(`[data-title="${title}"]`);
+  if (item) item.remove();
 }
 
-// --- UNHIGHLIGHT HEART WHEN REMOVED ---
+// ------------------------------
+// UNHIGHLIGHT HEART
+// ------------------------------
 function unhighlightHeart(title) {
   document.querySelectorAll(".product-box").forEach((box) => {
-    if (box.querySelector("h3").textContent === title) {
-      box.querySelector(".favorite-btn").classList.remove("favorited");
+    const t = box.querySelector(".product-title");
+    if (t && t.textContent.trim() === title) {
+      const heart = box.querySelector(".favorite-btn");
+      if (heart) heart.classList.remove("favorited");
     }
   });
 }
 
-// --- EMPTY MESSAGE LOGIC ---
+// ------------------------------
+// EMPTY MESSAGE
+// ------------------------------
 function updateEmptyMessage() {
-  const hasItems = favoritesContent.querySelectorAll(".fav-item").length > 0;
   const emptyMsg = favoritesContent.querySelector(".no-favorites");
+  if (!emptyMsg) return;
+
+  const hasItems = favoritesContent.querySelectorAll(".fav-item").length > 0;
   emptyMsg.style.display = hasItems ? "none" : "block";
 }
 
-// --- BUBBLE COUNTER LOGIC ---
-function updateFavoritesBubble() {
+// ------------------------------
+// BUBBLE COUNTER
+// ------------------------------
+function updateBubble() {
   const count = favoritesContent.querySelectorAll(".fav-item").length;
-  const bubble = document.querySelector(".favorites-bubble");
-
-  if (count === 0) {
-    bubble.style.display = "none";
-  } else {
-    bubble.style.display = "flex";
-    bubble.textContent = count;
-  }
+  bubble.style.display = count === 0 ? "none" : "flex";
+  bubble.textContent = count;
 }
 
-// --- OPEN/CLOSE FAVORITES PANEL ---
+// ------------------------------
+// OPEN / CLOSE PANEL
+// ------------------------------
 favoritesIcon.addEventListener("click", () => {
   favoritesPanel.classList.add("active");
 });
