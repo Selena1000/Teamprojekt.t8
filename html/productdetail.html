@@ -3,11 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ARETE</title>
+
     <link rel="stylesheet" href="/css/generel.css" />
     <link rel="stylesheet" href="/css/productdetail.css" />
   </head>
+  <header>
+    <div class="topbar">
+      <a href="/" class="logo">LOGO</a>
+
+      <nav class="main-nav">
+        <a href="">MENS</a>
+        <a href="">WOMENS</a>
+        <a href="">ACCESSORIES</a>
+      </nav>
+
+      <div class="actions">
+        <button class="nav-icon">♡</button>
+        <img src="/img.categorylist/Vector_result.webp" alt="kurv" class="icon" />
+
+        <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
+
+        <div class="burger-dropdown" id="burgerDropdown">
+          <a href="">MENS</a>
+          <a href="">WOMENS</a>
+          <a href="">ACCESSORIES</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <body>
-    <!-- "indkøbs siden -->
+    <main class="product-page">
+      <!-- BACK BUTTON -->
+      <a class="back-box" href="productlist.html">← Back</a>
+
+      <div class="product-grid">
+        <!-- LEFT: BILLEDER -->
+        <div class="image-section">
+          <div class="thumbs" id="thumbs"></div>
+
+          <div class="main-image">
+            <img id="mainImage" alt="Product image" />
+
+            <!-- PILENE -->
+            <button class="img-arrow left" id="prevImg">‹</button>
+            <button class="img-arrow right" id="nextImg">›</button>
+
+            <div class="image-counter" id="imageCounter">1/1</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div class="info-section">
+          <div class="category" id="category"></div>
+          <h1 class="title" id="title"></h1>
+
+          <div class="rating">
+            <span id="stars"></span>
+            <span id="reviews"></span>
+          </div>
+
+          <div class="price" id="price"></div>
+
+          <div class="label">Color</div>
+          <div class="colors" id="colors"></div>
+
+          <div class="label size-label">
+            Select a size
+            <span class="size-guide">Size guide</span>
+          </div>
+
+          <div class="sizes" id="sizes"></div>
+
+          <div class="details-link">View product details</div>
+
+          <div class="dropdown">
+            Delivery and returns
+            <span>⌄</span>
+          </div>
+
+          <div class="actions">
+            <button class="add-btn" id="addToBasket">Add to basket</button>
+            <button class="heart-btn" id="wishlist">♡</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/productdetail.js"></script>
+    <script src="/js/generel.js"></script>
   </body>
 </html>
