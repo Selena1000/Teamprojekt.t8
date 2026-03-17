@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/generel.css" />
     <link rel="stylesheet" href="/css/productdetail.css" />
     <link rel="stylesheet" href="../css/generel.css" />
+    <link rel="stylesheet" href="../css/favourites.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../fonts/AlbertSans-VariableFont_wght.woff" />
     <link rel="stylesheet" href="../fonts/Archivo-VariableFont_wdth,wght.woff" />
     <link rel="stylesheet" href="../fonts/ArchivoBlack-Regular.woff" />
@@ -15,12 +17,12 @@
   </head>
   <header>
     <div class="topbar">
-      <a href="/" class="logo"><img src="/img.categorylist/logo4.png" alt="logo" /></a>
+      <a href="index.html" class="logo"><img src="/img.categorylist/logo4.png" alt="logo" /></a>
 
       <nav class="main-nav">
-        <a href="index.html">PRODUCTS</a>
-        <a href="categorylist.html">ACCESSORIES</a>
-        <a href="productlist.html">BAGS</a>
+        <a href="index.html">HOME</a>
+        <a href="categorylist.html">PRODUCTS</a>
+        <a href="productlist.html">CATEGORIES</a>
       </nav>
 
       <div class="actions">
@@ -30,13 +32,47 @@
         <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
 
         <div class="burger-dropdown" id="burgerDropdown">
-          <a href="index.html">PRODUCTS</a>
-          <a href="categorylist.html">ACCESSORIES</a>
-          <a href="productlist.html">BAGS</a>
+          <a href="index.html">HOME</a>
+          <a href="categorylist.html">PRODUCTS</a>
+          <a href="productlist.html">CATEGORIES</a>
         </div>
       </div>
     </div>
   </header>
+  <div class="hero"></div>
+  <div class="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-content">
+      <div class="cart-box">
+        <!-- <img src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp" class="cart-image" alt="" />
+          <div class="cart-details">
+            <h3 class="cart-product-title">Product Title</h3>
+            <span class="cart-price">DKK,-</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="quantity">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="ri-delete-bin-5-line"></i> -->
+      </div>
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">DKK,-</div>
+      </div>
+      <button class="btn-buy">Go to checkout</button>
+      <i class="ri-close-line" id="cart-close"></i>
+    </div>
+  </div>
+
+  <div class="favorites">
+    <h2>Your Favorites</h2>
+
+    <div class="favorites-content">
+      <p class="no-favorites">No favorites yet</p>
+    </div>
+    <i class="ri-close-line" id="favorites-close"></i>
+  </div>
 
   <body>
     <main class="product-page">
@@ -126,5 +162,7 @@
     </footer>
     <script src="/js/productdetail.js"></script>
     <script src="/js/generel.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/favorite.js"></script>
   </body>
 </html>
