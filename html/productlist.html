@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/generel.css" />
+    <link rel="icon" type="image/svg+xml" href="/img.categorylist/favicon2.png" />
     <link rel="stylesheet" href="../css/productlist.css" />
-    <link rel="stylesheet" href="../css/generel.css" />
     <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../css/favourites.css" />
     <link rel="stylesheet" href="../fonts/AlbertSans-VariableFont_wght.woff" />
@@ -15,34 +14,38 @@
     <link rel="stylesheet" href="../fonts/ArchivoNarrow-VariableFont_wght.woff" />
     <link rel="stylesheet" href="../css/hero.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="../js/productlist.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/favorite.js" defer></script>
   </head>
   <body class="product-content">
-    <header>
-      <div class="topbar">
-        <a href="index.html" class="logo">LOGO</a>
+    <div class="hero">
+      <header>
+        <div class="topbar">
+          <a href="index.html" class="logo"><img src="../img.categorylist/logo4.png" alt="" /></a>
 
-        <nav class="main-nav" aria-label="Primær navigation">
-          <a href="index.html">PRODUCTS</a>
-          <a href="categorylist.html">ACCESSORIES</a>
-          <a href="productlist.html">BAGS</a>
-        </nav>
+          <nav class="main-nav" aria-label="Primær navigation">
+            <a href="index.html">HOME</a>
+            <a href="categorylist.html">PRODUCTS</a>
+            <a href="productlist.html">CATEGORIES</a>
+          </nav>
 
-        <div class="actions">
-          <button id="favorites-icon" class="nav-icon">♡<span class="favorites-bubble">0</span></button>
-          <div id="cart-icon">
-            <i class="ri-shopping-cart-2-line"></i>
-            <span class="cart-item-count"></span>
-          </div>
-          <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-          <div class="burger-dropdown" id="burgerDropdown">
-            <a href="index.html">PRODUCTS</a>
-            <a href="categorylist.html">ACCESSORIES</a>
-            <a href="productlist.html">BAGS</a>
+          <div class="actions">
+            <button id="favorites-icon" class="nav-icon">♡<span class="favorites-bubble">0</span></button>
+            <div id="cart-icon">
+              <i class="ri-shopping-cart-2-line"></i>
+              <span class="cart-item-count"></span>
+            </div>
+            <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+            <div class="burger-dropdown" id="burgerDropdown">
+              <a href="index.html">HOME</a>
+              <a href="categorylist.html">PRODUCTS</a>
+              <a href="productlist.html">CATEGORIES</a>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
-    <div class="hero"></div>
+      </header>
+    </div>
     <div class="cart">
       <h2>Your Cart</h2>
       <div class="cart-content">
@@ -78,7 +81,7 @@
     </div>
 
     <section class="category-header">
-      <h1 class="page-title">BAGS</h1>
+      <h1 class="page-title">PRODUCTS</h1>
 
       <div class="category-controls">
         <a href="categorylist.html" class="back-button"> ← Back </a>
@@ -89,90 +92,7 @@
         </button>
       </div>
     </section>
-    <main>
-      <article class="product-box">
-        <div class="img-box">
-          <i class="ri-poker-hearts-fill favorite-btn"></i>
-          <span class="discount-tag">-50%</span>
-          <img class="mainimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp" alt="" />
-          <img class="hoverimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/3.webp" alt="" />
-        </div>
-        <div class="color-options">
-          <span class="color-swatch" style="background-color: #9c9797"></span>
-          <span class="color-swatch" style="background-color: #9e2113"></span>
-        </div>
-        <h3 class="product-title">Nike Air Jordan 1</h3>
-        <p>Category title</p>
-        <div class="price-box">
-          <p class="price"><span class="old-price">DKK,-</span></p>
-          <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html" class="add-to-cart add-cart">Add to cart</a>
-        </div>
-      </article>
-      <article class="product-box">
-        <div class="img-box">
-          <i class="ri-poker-hearts-fill favorite-btn"></i>
-          <span class="discount-tag">-50%</span>
-          <img class="mainimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/1.webp" alt="" />
-          <img class="hoverimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/2.webp" alt="" />
-        </div>
-        <div class="color-options">
-          <span class="color-swatch" style="background-color: #9c9797"></span>
-          <span class="color-swatch" style="background-color: #000000"></span>
-          <span class="color-swatch" style="background-color: #073e08"></span>
-        </div>
-        <h3 class="product-title">Nike Baseball Cleats</h3>
-        <p>Category title</p>
-        <div class="price-box">
-          <p class="price"><span class="old-price">DKK,-</span></p>
-          <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html" class="add-to-cart add-cart">See more</a>
-        </div>
-      </article>
-      <article class="product-box soldout discounted">
-        <div class="img-box">
-          <i class="ri-poker-hearts-fill favorite-btn"></i>
-          <span class="discount-tag">-50%</span>
-          <img class="mainimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/1.webp" alt="" />
-          <img class="hoverimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/2.webp" alt="" />
-        </div>
-        <div class="color-options">
-          <span class="color-swatch" style="background-color: #9c9797"></span>
-          <span class="color-swatch" style="background-color: #f4d95f"></span>
-          <span class="color-swatch" style="background-color: #4057ec"></span>
-        </div>
-        <h3 class="product-title">Puma Future Rider Trainers</h3>
-        <p>Category title</p>
-        <div class="price-box">
-          <p class="price"><span class="old-price">DKK,-</span></p>
-          <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html" class="add-to-cart add-cart">See more</a>
-        </div>
-      </article>
-
-      <article class="product-box discounted">
-        <div class="img-box">
-          <i class="ri-poker-hearts-fill favorite-btn"></i>
-          <span class="discount-tag">-50%</span>
-          <img class="mainimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/3.webp" alt="" />
-          <img class="hoverimg" src="https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/2.webp" alt="" />
-        </div>
-        <div class="color-options">
-          <span class="color-swatch" style="background-color: #9c9797"></span>
-          <span class="color-swatch" style="background-color: #9e2113"></span>
-        </div>
-        <h3 class="product-title">Off-White Red Sneakers</h3>
-        <p>Category title</p>
-        <div class="price-box">
-          <p class="price"><span class="old-price">DKK,-</span></p>
-          <p class="new-price"><span>Now DKK,- </span></p>
-          <a href="productdetail.html" class="add-to-cart add-cart">See more</a>
-        </div>
-      </article>
-    </main>
-    <script src="../js/productlist.js"></script>
-    <script src="../js/cart.js"></script>
-    <script src="../js/favorite.js"></script>
+    <main></main>
     <footer class="footer">
       <h2 class="footer-title">ARETE</h2>
       <div class="grid-3">

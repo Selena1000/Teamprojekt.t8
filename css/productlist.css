@@ -1,5 +1,7 @@
 /* venstre: logo */
-
+.body {
+  margin: 0;
+}
 h1 {
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
@@ -320,4 +322,7 @@ a {
 
 .filter-button i {
   font-size: 25px;
+}
+body {
+  margin: 0;
 }
