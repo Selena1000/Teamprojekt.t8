@@ -129,3 +129,16 @@ const burgerDropdown = document.getElementById("burgerDropdown");
 burgerBtn.addEventListener("click", () => {
   burgerDropdown.classList.toggle("open");
 });
+
+// cart
+function updateCartBubble() {
+  const bubble = document.querySelector("#cart-icon .cart-item-count");
+  const items = document.querySelectorAll(".cart-box").length;
+
+  if (items > 0) {
+    bubble.textContent = items;
+    bubble.style.display = "flex";
+  } else {
+    bubble.style.display = "none";
+  }
+}
