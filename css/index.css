@@ -29,6 +29,7 @@
   margin-bottom: -4.5em;
 }
 
+/* solbrille produkterne */
 .products {
   padding: 40px 20px;
   margin-bottom: 1em;
@@ -42,6 +43,7 @@
 }
 .card-info {
   position: absolute;
+  scroll-snap-align: start;
 }
 .product-tabs span {
   font-size: 14px;
@@ -67,7 +69,6 @@
 .product-grid::-webkit-scrollbar {
   display: none;
 }
-
 .product-card {
   scroll-snap-align: start;
   flex: 0 0 220px;
@@ -119,6 +120,7 @@
   font-size: 18px;
   margin-top: 10em;
 }
+/* slutningen */
 
 .promo {
   width: 100%;
