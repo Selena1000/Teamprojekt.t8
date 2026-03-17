@@ -7,11 +7,12 @@
     <link rel="icon" type="image/svg+xml" href="/img.categorylist/favicon2.png" />
     <link rel="stylesheet" href="/css/generel.css" />
     <link rel="stylesheet" href="/css/categorylist.css" />
-    <link rel="stylesheet" href="../css/generel.css" />
+    <link rel="stylesheet" href="/css/generel.css" />
     <link rel="stylesheet" href="../fonts/AlbertSans-VariableFont_wght.woff" />
     <link rel="stylesheet" href="../fonts/Archivo-VariableFont_wdth,wght.woff" />
     <link rel="stylesheet" href="../fonts/ArchivoBlack-Regular.woff" />
     <link rel="stylesheet" href="../fonts/ArchivoNarrow-VariableFont_wght.woff" />
+    <script src="../js/categorylist.js" defer></script>
   </head>
   <!-- HERO -->
   <body>
@@ -22,8 +23,7 @@
 
         <nav class="main-nav" aria-label="Primær navigation">
           <a href="/html/index.html">HOME</a>
-          <a href="/html/categorylist.html">PRODUCTS</a>
-          <a href="/html/productlist.html">CATEGORIES</a>
+          <a href="/html/categorylist.html">CATEGORIES</a>
         </nav>
 
         <div class="actions">
@@ -33,8 +33,7 @@
           <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
           <div class="burger-dropdown" id="burgerDropdown">
             <a href="/html/index.html">HOME</a>
-            <a href="/html/categorylist.html">PRODUCTS</a>
-            <a href="/html/productlist.html">CATEGORIES</a>
+            <a href="/html/categorylist.html">CATEGORIES</a>
           </div>
         </div>
       </div>
@@ -45,77 +44,11 @@
       <section class="section accessories">
         <h1 class="section-title">CATEGORIES</h1>
 
-        <div class="cards">
-          <!-- Card 1 -->
-          <article class="card">
-            <div class="thumb">
-              <img src="/img.categorylist/accesories_result.webp" alt="All accessories" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">ALL ACCESORIES</h3>
-              <a href="#" class="pill">Shop now</a>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card">
-            <div class="thumb">
-              <img src="/img.categorylist/bags_result.webp" alt="Bags" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">BAGS</h3>
-              <a href="#" class="pill">Shop now</a>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="card">
-            <div class="thumb">
-              <img src="/img.categorylist/womenshoes_result.webp" alt="Womens Shoes" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">WOMENS SHOES</h3>
-              <a href="#" class="pill">Shop now</a>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="card">
-            <div class="thumb">
-              <img src="/img.categorylist/menshoes_result.webp" alt="Mens Shoes" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">MENS SHOES</h3>
-              <a href="#" class="pill">Shop now</a>
-            </div>
-          </article>
-
-          <!-- Card 5 -->
-          <article class="card">
-            <div class="thumb">
-              <img src="/img.categorylist/sportsgear_result.webp" alt="Sports gear" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">SPORTS GEAR</h3>
-              <a href="#" class="pill">Shop now</a>
-            </div>
-          </article>
-
-          <!-- Card 6 -->
-          <article class="card">
-            <div class="thumb">
-              <img src="/img.categorylist/sunglasses_result.webp" alt="Sunglasses" />
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">SUNGLASSES</h3>
-              <a href="#" class="pill">Shop now</a>
-            </div>
-          </article>
-        </div>
+        <div class="cards"></div>
       </section>
     </main>
     <footer class="footer">
-      <h2 class="footer-title">ARETE</h2>
+      <img class="footerlogo" src="../img.categorylist/logo4.png" />
       <div class="grid-3">
         <div class="footer-section-location">
           <h3>LOCATION</h3>
@@ -143,6 +76,5 @@
       </div>
       <p>AreteSport2026™</p>
     </footer>
-    <script src="../js/categorylist.js"></script>
   </body>
 </html>
