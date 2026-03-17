@@ -9,6 +9,7 @@ document.querySelectorAll(".color-options").forEach((group) => {
     });
   });
 });
+
 const burger = document.querySelector(".burger");
 const burgerDropdown = document.querySelector("#burgerDropdown");
 
@@ -28,24 +29,26 @@ fetch(`https://dummyjson.com/products/category/${category}`)
   .then((products) => {
     console.log(products);
     products.products.forEach((product) => {
-      productContainer.innerHTML += `<article class="product-box soldout">
+      console.log("availabilityStatus", product.availabilityStatus === "In Stock" || product.availabilityStatus === "Low Stock" ? "" : "soldout");
+      productContainer.innerHTML += `<article class="product-box ${product.availabilityStatus === "In Stock" || product.availabilityStatus === "Low Stock" ? "" : "soldout"} ${product.discountPercentage ? "discounted" : ""}">
             <div class="img-box">
               <i class="ri-poker-hearts-fill favorite-btn"></i>
-              <span class="discount-tag">-50%</span>
+              ${product.discountPercentage ? `<span class='discount-tag'>-${product.discountPercentage}%</span>` : ""}
+              <span class="discount-tag">-${product.discountPercentage}%</span>
               <img class="mainimg" src="${product.thumbnail}" alt="" />
               <img class="hoverimg" src="${product.images[1]}" alt="" />
             </div>
             <div class="color-options">
               <span class="color-swatch" style="background-color: #9c9797"></span>
               <span class="color-swatch" style="background-color: #000000"></span>
-              <span class="color-swatch" style="background-color: #073e08"></span>
+
             </div>
             <h3 class="product-title">${product.title}</h3>
             <p>Category title</p>
             <div class="price-box">
-              <p class="price"><span class="old-price">DKK,-</span></p>
-              <p class="new-price"><span>Now DKK,- </span></p>
-              <a href="productdetail.html" class="add-to-cart add-cart">See more</a>
+              <p class="price"><span class="old-price">DKK ${product.price},-</span></p>
+              <p class="new-price"><span>Now DKK${Math.ceil((product.price / 100) * product.discountPercentage)},- </span></p>
+              <a href="productdetail.html?id=${product.id}" class="add-to-cart add-cart">See more</a>
             </div>
           </article>`;
     });
