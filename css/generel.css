@@ -1,7 +1,9 @@
 body {
   margin: 0;
 }
-
+.footerlogo {
+  height: 300px;
+}
 .footer {
   background: #382d23;
   color: #ffff8c;
