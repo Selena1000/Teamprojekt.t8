@@ -5,7 +5,6 @@
   --card-bg: #e9e1da;
   --card-radius: 14px;
   --gap: 22px;
-  --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 * {
@@ -58,6 +57,7 @@ body {
   justify-self: center;
   display: flex;
   gap: clamp(16px, 4vw, 40px);
+  font-family: "Archivo Black", sans-serif;
 }
 
 .main-nav a {
@@ -109,8 +109,8 @@ body {
 }
 .burger-dropdown {
   position: absolute;
-  top: 70px;
-  right: 0;
+  top: 130px;
+  right: 30px;
   background: #3a2a1a;
   border: 1px solid #ffff8c;
   border-radius: 8px;
@@ -173,17 +173,18 @@ body {
 }
 
 .card-body {
-  position: relative;
+  position: absolute;
   padding: 12px 14px 16px;
-  background: #f2eeea;
+  /* background: #f2eeea; */
+  margin-top: 9em;
 }
 
 .card-title {
   margin: 0 0 36px 0;
-  font-size: 16px;
+  font-size: 30px;
   letter-spacing: 2px;
   font-weight: 700;
-  color: #111;
+  color: #ffff8c;
 }
 
 .pill {
@@ -191,7 +192,7 @@ body {
   left: 12px;
   bottom: 12px;
   display: inline-block;
-  background: var(--brand-yellow);
+  background: #ffff8c;
   color: #1f1f1f;
   text-decoration: none;
   font-weight: 700;
@@ -200,6 +201,7 @@ body {
   padding: 9px 12px;
   border-radius: 999px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  font-family: "albert sans", sans-serif;
 }
 
 .card,
@@ -207,7 +209,46 @@ body {
 .card-body {
   border-radius: var(--card-radius);
 }
-
+@font-face {
+  font-family: Albert Sans;
+  src: url(../fonts/AlbertSans-VariableFont_wght.woff);
+}
+@font-face {
+  font-family: Archivo;
+  src: url(../fonts/Archivo-VariableFont_wght.woff);
+}
+@font-face {
+  font-family: ArchivoBlack;
+  src: url(../fonts/ArchivoBlack-VariableFont_wght.woff);
+}
+@font-face {
+  font-family: Archivo Narrow;
+  src: url(../fonts/ArchivoNarrow-VariableFont_wght.woff);
+}
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h2 {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h3 {
+  font-family: "Archivo Narrow", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+p {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 980px) {
   .cards {
