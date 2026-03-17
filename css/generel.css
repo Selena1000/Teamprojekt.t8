@@ -34,7 +34,7 @@ body {
 }
 @media (min-width: 800px) {
   .footer {
-    padding: 60px 80px;
+    padding: 10px 80px;
     gap: 40px;
   }
   .grid-3 {
@@ -83,13 +83,14 @@ body {
 
 /* topbar oven på billedet */
 .topbar {
+  z-index: 2;
   position: absolute;
   inset: 0 0 auto 0;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 1px 30px;
-  margin-top: -49px;
+  margin-top: -60px;
 }
 
 /* venstre: logo */
@@ -173,4 +174,5 @@ body {
 
 .burger-dropdown.open {
   display: flex;
+  margin-top: 50px;
 }
