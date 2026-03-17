@@ -37,7 +37,7 @@ body {
 }
 
 /* topbar oven på billedet */
-.topbar {
+/* .topbar {
   position: absolute;
   inset: 0 0 auto 0;
   display: grid;
@@ -48,25 +48,26 @@ body {
 }
 
 /* venstre: logo */
-.logo img {
+/* .logo img {
   width: 200px;
-}
+} */
 
 /* midten: nav */
-.main-nav {
+/* .main-nav {
   justify-self: center;
   display: flex;
   gap: clamp(16px, 4vw, 40px);
   font-family: "Archivo Black", sans-serif;
-}
+} */
+*/
 
-.main-nav a {
+/* .main-nav a {
   color: #ffff8c;
   text-decoration: none;
   font-weight: 600;
   font-size: clamp(12px, 1.4vw, 18px);
   letter-spacing: 2px;
-}
+} */
 
 /* højre: ikoner */
 .actions {
