@@ -81,3 +81,77 @@
             <p>Running shoes</p>
             <p>DKK 600,-</p>
           </div> -->
+
+
+          .products {
+  padding: 40px 0;
+}
+
+/* SCROLL CONTAINER */
+.product-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-left: 20px;
+  scroll-padding-left: 20px;
+  scrollbar-width: none;
+}
+.product-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+.product-card {
+  flex: 0 0 75%; /* mobil: ~2.5 cards */
+  background: white;
+  border-radius: 16px;
+  padding: 12px;
+
+  scroll-snap-align: start;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* IMAGE */
+.product-img img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* INFO */
+.card-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-info h3 {
+  font-size: 16px;
+}
+
+.card-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* BUTTON */
+.seemore {
+  background: #ffff8c;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  width: fit-content;
+}
+
+/* TABLET */
+@media (min-width: 800px) {
+  .product-card {
+    flex: 0 0 45%;
+  }
+}
