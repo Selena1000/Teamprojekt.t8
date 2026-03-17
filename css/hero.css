@@ -116,7 +116,8 @@
 }
 
 .logo img {
-  width: 200px;
+  width: 120px;
+  margin-top: 1.3em;
 }
 
 .footer {
@@ -150,6 +151,10 @@
   gap: 1rem;
 }
 @media (min-width: 800px) {
+  .logo img {
+    width: 200px;
+    margin-top: -5px;
+  }
   .footer {
     padding: 60px 80px;
     gap: 40px;
