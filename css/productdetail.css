@@ -99,39 +99,6 @@ body {
   object-fit: cover;
 }
 
-.img-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.img-arrow.left {
-  left: 10px;
-}
-
-.img-arrow.right {
-  right: 10px;
-}
-
-.image-counter {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-}
-
 .category {
   font-size: 13px;
   color: #666;
@@ -443,39 +410,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .img-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-  }
-
-  .img-arrow.left {
-    left: 10px;
-  }
-
-  .img-arrow.right {
-    right: 10px;
-  }
-
-  .image-counter {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
   }
 
   /* PRODUCT INFO */
