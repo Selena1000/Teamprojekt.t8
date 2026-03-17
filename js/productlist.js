@@ -39,7 +39,7 @@ fetch(`https://dummyjson.com/products/category/${category}`)
               <img class="hoverimg" src="${product.images[1]}" alt="" />
             </div>
             <div class="color-options">
-              <span class="color-swatch" style="background-color: #9c9797"></span>
+              <span class="color-swatch" style="background-color: #ffffffff"></span>
               <span class="color-swatch" style="background-color: #000000"></span>
 
             </div>
