@@ -19,12 +19,15 @@ fetch("https://dummyjson.com/products/category/sunglasses")
               <img src="${sunglas.thumbnail}" />
             </div>
             <div class="card-info">
-            <button class="seemore">See more</button>
+            <a href="productdetail.html?id=${sunglas.id}" class="seemore">See More</a>
             <h3>${sunglas.brand}</h3>
             <p>${sunglas.category}</p>
             <p>€ ${sunglas.price},-</p>
             </div>
-          </div>
-`;
+            </div>`;
     });
   });
+// <button href="https://dr.dk" class="seemore">See more</button>
+// <a class="seemore" href="productdetail.html?id=${sunglas.id}">link</a>
+// <button href="https://dr.dk" class="seemore">See more</button>//
+// <a href="productlist.html?category=womens-bags" class="shop-now">Shop now</a>
