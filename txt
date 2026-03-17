@@ -1,0 +1,83 @@
+<!-- <div class="product-card">
+            <div class="product-img">
+              <img src="" />
+            </div>
+            <button class="seemore">See more</button>
+            <div class="product-colors">
+              <span class="color"></span>
+              <span class="color active"></span>
+            </div>
+            <h3>Arete</h3>
+            <p>Running shoes</p>
+            <p>DKK 600,-</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="" />
+            </div>
+            <button class="seemore">See more</button>
+            <div class="product-colors">
+              <span class="color"></span>
+              <span class="color active"></span>
+            </div>
+            <h3>Arete</h3>
+            <p>Running shoes</p>
+            <p>DKK 600,-</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="" />
+            </div>
+            <button class="seemore">See more</button>
+            <div class="product-colors">
+              <span class="color"></span>
+              <span class="color active"></span>
+            </div>
+            <h3>Arete</h3>
+            <p>Running shoes</p>
+            <p>DKK 600,-</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="" />
+            </div>
+            <button class="seemore">See more</button>
+            <div class="product-colors">
+              <span class="color"></span>
+              <span class="color active"></span>
+            </div>
+            <h3>Arete</h3>
+            <p>Running shoes</p>
+            <p>DKK 600,-</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="" />
+            </div>
+            <button class="seemore">See more</button>
+            <div class="product-colors">
+              <span class="color"></span>
+              <span class="color active"></span>
+            </div>
+            <h3>Arete</h3>
+            <p>Running shoes</p>
+            <p>DKK 600,-</p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="" />
+            </div>
+            <button class="seemore">See more</button>
+            <div class="product-colors">
+              <span class="color"></span>
+              <span class="color active"></span>
+            </div>
+            <h3>Arete</h3>
+            <p>Running shoes</p>
+            <p>DKK 600,-</p>
+          </div> -->

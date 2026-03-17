@@ -60,6 +60,7 @@ a {
 
 .products {
   padding: 40px 20px;
+  margin-bottom: 1em;
 }
 
 .product-tabs {
@@ -68,7 +69,9 @@ a {
   gap: 30px;
   margin-bottom: 30px;
 }
-
+.card-info {
+  position: absolute;
+}
 .product-tabs span {
   font-size: 14px;
 }
@@ -106,15 +109,6 @@ a {
   margin-bottom: 10px;
 }
 
-.product-card button {
-  margin-bottom: 10px;
-}
-
-.product-colors {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 8px;
-}
 .seemore {
   background: white;
   padding: 10px 20px;
@@ -141,9 +135,9 @@ a {
   background: #ffff8c;
   color: black;
   border: none;
-  padding: 20px 60px;
   border-radius: 30px;
   font-size: 18px;
+  margin-top: 10em;
 }
 
 .promo {
@@ -228,9 +222,7 @@ a {
   .product-img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 4 / 3;
     background: #ccc;
-    margin-bottom: 10px;
   }
 
   .shop-all button {

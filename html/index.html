@@ -7,6 +7,8 @@
     <link rel="icon" type="image/svg+xml" href="/img.categorylist/favicon2.png" />
     <link rel="stylesheet" href="../css/generel.css" />
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/favourites.css" />
     <link rel="stylesheet" href="../fonts/AlbertSans-VariableFont_wght.woff" />
     <link rel="stylesheet" href="../fonts/Archivo-VariableFont_wdth,wght.woff" />
     <link rel="stylesheet" href="../fonts/ArchivoBlack-Regular.woff" />
@@ -18,24 +20,41 @@
         <a href="../html/index.html" class="logo"><img src="../img.categorylist/logo4.png" /></a>
 
         <nav class="main-nav" aria-label="Primær navigation">
-          <a href="../html/index.html">PRODUCTS</a>
-          <a href="../html/categorylist.html">ACCESSORIES</a>
-          <a href="../html/productlist.html">BAGS</a>
+          <a href="../html/index.html">HOME</a>
+          <a href="../html/categorylist.html">PRODUCTS</a>
+          <a href="../html/productlist.html">CATEGORIES</a>
         </nav>
 
         <div class="actions">
-          <button class="nav-icon">♡</button>
+          <button id="favorites-icon" class="nav-icon">♡<span class="favorites-bubble">0</span></button>
           <img src="/img.categorylist/Vector_result.webp" alt="kurv" class="icon" />
+          <!--  <div id="cart-icon">
+            <i class="ri-shopping-cart-2-line"></i>
+            <span class="cart-item-count"></span>
+          </div> -->
 
           <button class="burger" id="burgerBtn"><span></span><span></span><span></span></button>
           <div class="burger-dropdown" id="burgerDropdown">
-            <a href="../html/index.html">PRODUCTS</a>
-            <a href="../html/categorylist.html">ACCESSORIES</a>
-            <a href="../html/productlist.html">BAGS</a>
+            <a href="../html/index.html">HOME</a>
+            <a href="../html/categorylist.html">PRODUCTS</a>
+            <a href="../html/productlist.html">CATEGORIES</a>
           </div>
         </div>
       </div>
     </header>
+
+    <div class="cart">
+      <h2>Your Cart</h2>
+      <div class="cart-content">
+        <div class="cart-box"></div>
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">DKK,-</div>
+        </div>
+        <button class="btn-buy">Go to checkout</button>
+        <i class="ri-close-line" id="cart-close"></i>
+      </div>
+    </div>
 
     <main>
       <section class="hero">
@@ -50,91 +69,7 @@
           <span class="coming-soon">COMING SOON</span>
         </div>
 
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-img">
-              <img src="" />
-            </div>
-            <button class="seemore">See more</button>
-            <div class="product-colors">
-              <span class="color"></span>
-              <span class="color active"></span>
-            </div>
-            <h3>Arete</h3>
-            <p>Running shoes</p>
-            <p>DKK 600,-</p>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img">
-              <img src="" />
-            </div>
-            <button class="seemore">See more</button>
-            <div class="product-colors">
-              <span class="color"></span>
-              <span class="color active"></span>
-            </div>
-            <h3>Arete</h3>
-            <p>Running shoes</p>
-            <p>DKK 600,-</p>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img">
-              <img src="" />
-            </div>
-            <button class="seemore">See more</button>
-            <div class="product-colors">
-              <span class="color"></span>
-              <span class="color active"></span>
-            </div>
-            <h3>Arete</h3>
-            <p>Running shoes</p>
-            <p>DKK 600,-</p>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img">
-              <img src="" />
-            </div>
-            <button class="seemore">See more</button>
-            <div class="product-colors">
-              <span class="color"></span>
-              <span class="color active"></span>
-            </div>
-            <h3>Arete</h3>
-            <p>Running shoes</p>
-            <p>DKK 600,-</p>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img">
-              <img src="" />
-            </div>
-            <button class="seemore">See more</button>
-            <div class="product-colors">
-              <span class="color"></span>
-              <span class="color active"></span>
-            </div>
-            <h3>Arete</h3>
-            <p>Running shoes</p>
-            <p>DKK 600,-</p>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img">
-              <img src="" />
-            </div>
-            <button class="seemore">See more</button>
-            <div class="product-colors">
-              <span class="color"></span>
-              <span class="color active"></span>
-            </div>
-            <h3>Arete</h3>
-            <p>Running shoes</p>
-            <p>DKK 600,-</p>
-          </div>
-        </div>
+        <div class="product-grid"></div>
 
         <div class="shop-all">
           <button href="categorylist.html">SHOP ALL!</button>
@@ -145,8 +80,8 @@
         <img class="chucks" src="../img.index/chucks.webp" />
         <div class="promo-indhold">
           <h2 class="chucks-h2">THE <span>WHITE</span> CHUCKS</h2>
-          <p class="chucks-p">new colors available</p>
-          <button href="linkes til sko-category" class="shop-now">Shop now</button>
+          <p class="chucks-p">Available 1 April 2026</p>
+          <button href="" class="shop-now">Coming soon</button>
         </div>
       </section>
 
@@ -154,25 +89,25 @@
         <div class="category">
           <img src="../img.index/b1.webp" alt="tasker" />
           <h3>BAGS</h3>
-          <button href="taske kategori" class="shop-now">Shop now</button>
+          <button href="productlist.html" class="shop-now">Shop now</button>
         </div>
 
         <div class="category">
           <img src="../img.index/b2.webp" alt="accessories" />
           <h3>ACCESSORIES</h3>
-          <button href="accessories kategori" class="shop-now">Shop now</button>
+          <button href="categorylist.html" class="shop-now">Shop now</button>
         </div>
 
         <div class="category">
           <img src="../img.index/b3.webp" alt="sko" />
           <h3>SHOES</h3>
-          <button href="sko kategori" class="shop-now">Shop now</button>
+          <button href="productlist.html" class="shop-now">Shop now</button>
         </div>
 
         <div class="category">
           <img src="../img.index/b4.webp" alt="Nye arrivals" />
           <h3>NEW IN</h3>
-          <button href="solbriller kategori" class="shop-now">Shop now</button>
+          <button href="productlist.html" class="shop-now">Shop now</button>
         </div>
       </section>
     </main>
@@ -208,5 +143,7 @@
       <p>AreteSport2026™</p>
     </footer>
     <script src="../js/index.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/favorite.js"></script>
   </body>
 </html>
