@@ -1,144 +1,70 @@
-const product = {
-  category: "Accessories | Bags",
-  title: "ARETE TOTE BAG",
-  price: 1299,
-  rating: 3,
-  reviews: 50,
-  images: ["https://via.placeholder.com/800x600?text=Image+1", "https://via.placeholder.com/800x600?text=Image+2", "https://via.placeholder.com/800x600?text=Image+3", "https://via.placeholder.com/800x600?text=Image+4"],
-  colors: ["#111", "#444", "#bbb", "#e5e5e5", "#fff"],
-  sizes: ["xs", "s", "m", "l", "xl", "xxl"],
-};
+const params = new URLSearchParams(window.location.search);
 
-let currentImage = 0;
-let selectedColor = 0;
-let selectedSize = "xs";
+const id = params.get("id");
+console.log(id);
+const main = document.querySelector(".product-page");
 
-// Tekstfelter
-document.getElementById("category").textContent = product.category;
-document.getElementById("title").textContent = product.title;
-document.getElementById("price").textContent = `DKK ${product.price},-`;
-document.getElementById("reviews").textContent = `Reviews (${product.reviews})`;
+fetch(`https://dummyjson.com/products/${id}`)
+  .then((respone) => respone.json())
+  .then((product) => {
+    main.innerHTML += `
+      <!-- BACK BUTTON -->
+      <a class="back-box" href="productlist.html">← Back</a>
 
-document.getElementById("stars").textContent = "★".repeat(product.rating) + "☆".repeat(5 - product.rating);
+      <div class="product-grid">
 
-// -------------------------
-// BILLEDER
-// -------------------------
-function renderImages() {
-  const thumbs = document.getElementById("thumbs");
-  thumbs.innerHTML = "";
+        <!-- LEFT: BILLEDER -->
+        <div class="image-section">
+          <div class="thumbs" id="thumbs"></div>
 
-  product.images.forEach((src, i) => {
-    const div = document.createElement("div");
-    div.className = "thumb" + (i === currentImage ? " active" : "");
-    div.innerHTML = `<img src="${src}">`;
-    div.onclick = () => {
-      currentImage = i;
-      updateMainImage();
-      renderImages();
-    };
-    thumbs.appendChild(div);
+          <div class="main-image">
+            <img src="${product.thumbnail}" id="mainImage" alt="Product image" />
+
+            <button class="img-arrow left" id="prevImg">‹</button>
+            <button class="img-arrow right" id="nextImg">›</button>
+
+            <div class="image-counter" id="imageCounter">1/${product.images.length}</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div class="info-section">
+          <div class="category">${product.category}</div>
+          <h1 class="title">${product.title}</h1>
+
+          <div class="rating">
+            <span id="stars">${"★".repeat(Math.round(product.rating))}${"☆".repeat(5 - Math.round(product.rating))}</span>
+            <span id="reviews">Reviews (${product.reviews.length})</span>
+          </div>
+
+          <div class="price">DKK ${product.price},-</div>
+
+          <div class="label">Brand</div>
+          <p>${product.brand}</p>
+
+          <div class="label">Description</div>
+          <p class="description">${product.description}</p>
+
+          <div class="label">Shipping</div>
+          <p>${product.shippingInformation}</p>
+
+          <div class="label">Warranty</div>
+          <p>${product.warrantyInformation}</p>
+
+          <div class="label">Return Policy</div>
+          <p>${product.returnPolicy}</p>
+
+          <div class="actions">
+            <button class="add-btn" id="addToBasket">Add to basket</button>
+            <button class="heart-btn" id="wishlist">♡</button>
+          </div>
+        </div>
+      </div>
+    `;
   });
+const burger = document.querySelector(".burger");
+const burgerDropdown = document.querySelector("#burgerDropdown");
 
-  updateMainImage();
-}
-
-function updateMainImage() {
-  document.getElementById("mainImage").src = product.images[currentImage];
-  document.getElementById("imageCounter").textContent = `${currentImage + 1}/${product.images.length}`;
-}
-
-// Pile til billedskift
-document.getElementById("prevImg").onclick = () => {
-  currentImage--;
-  if (currentImage < 0) currentImage = product.images.length - 1;
-  updateMainImage();
-  renderImages();
-};
-
-document.getElementById("nextImg").onclick = () => {
-  currentImage++;
-  if (currentImage >= product.images.length) currentImage = 0;
-  updateMainImage();
-  renderImages();
-};
-
-// -------------------------
-// FARVER
-// -------------------------
-function renderColors() {
-  const colors = document.getElementById("colors");
-  colors.innerHTML = "";
-
-  product.colors.forEach((hex, i) => {
-    const dot = document.createElement("div");
-    dot.className = "color-dot" + (i === selectedColor ? " active" : "");
-    dot.style.backgroundColor = hex;
-    dot.onclick = () => {
-      selectedColor = i;
-      renderColors();
-    };
-    colors.appendChild(dot);
-  });
-}
-
-// -------------------------
-// STØRRELSER
-// -------------------------
-function renderSizes() {
-  const sizes = document.getElementById("sizes");
-  sizes.innerHTML = "";
-
-  product.sizes.forEach((size) => {
-    const btn = document.createElement("button");
-    btn.className = "size-btn" + (size === selectedSize ? " active" : "");
-    btn.textContent = size;
-    btn.onclick = () => {
-      selectedSize = size;
-      renderSizes();
-    };
-    sizes.appendChild(btn);
-  });
-}
-
-// -------------------------
-// KNAPPER
-// -------------------------
-document.getElementById("addToBasket").onclick = () => {
-  alert(`Added to basket:\n${product.title}\nSize: ${selectedSize.toUpperCase()}`);
-};
-
-document.getElementById("wishlist").onclick = () => {
-  const btn = document.getElementById("wishlist");
-  btn.textContent = btn.textContent === "♡" ? "♥" : "♡";
-};
-
-// -------------------------
-// INITIALISERING
-// -------------------------
-renderImages();
-renderColors();
-renderSizes();
-
-// -------------------------
-// Header
-// -------------------------
-const burgerBtn = document.getElementById("burgerBtn");
-const burgerDropdown = document.getElementById("burgerDropdown");
-
-burgerBtn.addEventListener("click", () => {
+burger.addEventListener("click", () => {
   burgerDropdown.classList.toggle("open");
 });
-
-// cart
-function updateCartBubble() {
-  const bubble = document.querySelector("#cart-icon .cart-item-count");
-  const items = document.querySelectorAll(".cart-box").length;
-
-  if (items > 0) {
-    bubble.textContent = items;
-    bubble.style.display = "flex";
-  } else {
-    bubble.style.display = "none";
-  }
-}
