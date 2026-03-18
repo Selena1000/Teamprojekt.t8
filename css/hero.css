@@ -113,6 +113,7 @@
 
 .burger-dropdown.open {
   display: flex;
+  margin-top: 65px;
 }
 
 .logo img {
