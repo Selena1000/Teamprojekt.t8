@@ -20,7 +20,7 @@ fetch("https://dummyjson.com/products/categories")
       if (categories.includes(category.name)) {
         document.querySelector(".cards").innerHTML += `<article class="card">
             <div class="thumb">
-              <img src="/img.categorylist/${category.name}.webp" alt="Sunglasses" />
+              <img src="img.categorylist/${category.name}.webp" alt="Sunglasses" />
             </div>
             <div class="card-body">
               <h3 class="card-title">${category.name}</h3>
