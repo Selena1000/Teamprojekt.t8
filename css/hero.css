@@ -2,7 +2,7 @@
   position: relative;
   height: 500px;
   /* 👉 Udskift med dit billede */
-  background-image: url("/images/herooproduct.webp");
+  background-image: url("../images/herooproduct.webp");
   background-size: cover;
   background-position: center;
 }

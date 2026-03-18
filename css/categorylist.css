@@ -25,7 +25,7 @@ body {
 .hero {
   position: relative;
   height: 500px;
-  background-image: url("/img.categorylist/hero2_result.webp");
+  background-image: url("../img.categorylist/hero2_result.webp");
   background-size: cover;
   background-position: center;
 }
@@ -249,6 +249,11 @@ p {
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+}
+a {
+  font-family: "Albert Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
 }
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 980px) {
